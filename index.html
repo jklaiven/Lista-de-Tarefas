@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Lista de Tarefas</title>
+  </head>
+  <body>
+    <div class="board" id="board">
+      <h3>A FAZER:</h3>
+
+      <ul id="tudo" ondrop="drop(event, this.id)" ondragover="over(event)"></ul>
+
+      <div class="add-card" onclick="addCard(this)">
+        <i class="icon-add"
+          ><img
+            src="add-document.svg"
+            alt="Botão para adicionar uma nova tarefa"
+            class="add-img"
+        /></i>
+      </div>
+    </div>
+
+    <div class="board">
+      <h3>FAZENDO:</h3>
+
+      <ul
+        id="doing"
+        ondrop="drop(event, this.id)"
+        ondragover="over(event)"
+      ></ul>
+
+      <div class="add-card" onclick="addCard(this)">
+        <i class="icon-add"
+          ><img
+            src="add-document.svg"
+            alt="Botão para adicionar uma nova tarefa"
+        /></i>
+      </div>
+    </div>
+
+    <div class="board">
+      <h3>TERMINADO:</h3>
+
+      <ul id="done" ondrop="drop(event, this.id)" ondragover="over(event)"></ul>
+
+      <div class="add-card" onclick="addCard(this)">
+        <i class="icon-add"
+          ><img
+            src="add-document.svg"
+            alt="Botão para adicionar uma nova tarefa"
+        /></i>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
